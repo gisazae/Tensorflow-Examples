@@ -1,4 +1,4 @@
-## Procesar el KDD 2015 Intrusion Detection from UNB 
+## Procesar el KDD 2015 Intrusion Detection 
 #!/usr/bin/env python
 import tensorflow as tf
 msg = tf.constant("Test Dataset TF")
@@ -7,6 +7,7 @@ print(sess.run(msg))
 x = tf.constant(9)
 y = tf.constant(2)
 print(sess.run(x + y))
+# Based on https://github.com/albahnsen/ML_SecurityInformatics
 import pandas as pn
 pn.set_option('display.max_columns', 500)
 import zipfile
@@ -22,3 +23,5 @@ X = data[['same_srv_rate','dst_host_srv_count']]
 print(X)
 y = (data['class'] == 'anomaly').astype(int)
 print(y)
+## Falta aplicar tensores con lineal_regression
+## .................
