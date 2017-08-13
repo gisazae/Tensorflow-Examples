@@ -16,8 +16,6 @@ with zipfile.ZipFile('../datasets/UNB_ISCX_NSL_KDD.csv.zip', 'r') as z:
     data = pn.io.parsers.read_table(f, sep=',')
 data.head()
 print(data)
-y = (data['class'] == 'anomaly').astype(int)
-print(y)
 y.value_counts()
 X = data[['same_srv_rate','dst_host_srv_count']]
 print(X)
