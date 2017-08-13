@@ -23,5 +23,5 @@ X = data[['same_srv_rate','dst_host_srv_count']]
 print(X)
 y = (data['class'] == 'anomaly').astype(int)
 print(y)
-## Falta aplicar tensores con lineal_regression
+## Falta aplicar tensores con linear_regression
 ## .................
