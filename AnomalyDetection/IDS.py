@@ -1,4 +1,4 @@
-## Procesar el KDD 2015 Intrusion Detection 
+## With KDD 2015 Intrusion Detection 
 #!/usr/bin/env python
 import tensorflow as tf
 msg = tf.constant("Test Dataset TF")
@@ -11,9 +11,7 @@ print(sess.run(x + y))
 import pandas as pn
 pn.set_option('display.max_columns', 500)
 import zipfile
-# DATASET NSL-KDD is a data set suggested to solve some of the inherent 
-# network-based IDS problems
-# http://www.unb.ca/cic/research/datasets/nsl.html
+# DATASET NSL-KDD from http://www.unb.ca/cic/research/datasets/nsl.html
 with zipfile.ZipFile('../datasets/UNB_ISCX_NSL_KDD.csv.zip', 'r') as z:
     f = z.open('UNB_ISCX_NSL_KDD.csv')
     data = pn.io.parsers.read_table(f, sep=',')
